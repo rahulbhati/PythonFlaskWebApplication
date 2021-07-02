@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Featurs List</title>
+</head>
+<body>
+<form action="/process/" method="post">
+<h4>Training Data Set</h4>
+<table border="1px;">
+       <thead>
+        <th>Feature1</th><th>Feature 1</th><th>Target</th>
+       </thead>
+       <tbody>
+       {% for i in range(0,trainingLen) %}
+         <tr>
+             <td>{{trainingData[i][0]}}</td>
+             <td>{{trainingData[i][1]}}</td>
+             <td>{{targetTrainingData[i]}}</td>
+         </tr>
+        {% endfor %}
+       </tbody>
+   </table>
+<h4>Query Data Set</h4>
+<table border="1px;">
+       <thead>
+        <th>Feature1</th><th>Feature 1</th><th>Target</th>
+       </thead>
+       <tbody>
+       {% for i in range(0,testLen) %}
+         <tr>
+             <td>{{testData[i][0]}}</td>
+             <td>{{testData[i][1]}}</td>
+             <td>{{targetTestdata[i]}}</td>
+         </tr>
+        {% endfor %}
+       </tbody>
+   </table>
+<h4>Classification Algorithms :</h4>
+<select name="algo">
+    <option value="">---Please Select Algo---</option>
+    <option value="knn">KNN Algorithm</option>
+</select>
+<input type="submit" value="Process">
+</form>
+</body>
+</html>

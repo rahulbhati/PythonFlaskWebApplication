@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pradicted Results</title>
+</head>
+<body>
+<h4>Classical Algorithm - KNN - Results</h4>
+<table border="1px;">
+       <thead>
+       <th>Feature1</th><th>Feature 1</th><th>Actual</th><th>Result</th>
+       </thead>
+       <tbody>
+       {% for i in range(0,resultLen) %}
+         <tr>
+             <td>{{testData[i][0]}}</td>
+             <td>{{testData[i][1]}}</td>
+             <td>{{targetTestdata[i]}}</td>
+             <td>{{result[i]}}</td>
+         </tr>
+        {% endfor %}
+       </tbody>
+   </table>
+
+</body>
+</html>
